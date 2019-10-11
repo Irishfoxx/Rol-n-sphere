@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Users/O`Brien/Documents/Unity Teach/Done/rollnsphere.apk
+D:/Users/O`Brien/Documents/Unity Teach/Done/rollnsphere v 0.2 .apk
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/GameScene.unity

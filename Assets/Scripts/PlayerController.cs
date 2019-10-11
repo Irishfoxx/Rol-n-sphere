@@ -70,16 +70,20 @@ public class PlayerController : MonoBehaviour
 
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-
-            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
+            if (onGround)
+            {
+                myRigidBody.velocity = new Vector3(myRigidBody.velocity.x, jumpForce);
+            }
 
         }
 
-        // KEYBOARD SETTINGS
+        
 
-        // let player jump
+            // KEYBOARD SETTINGS
 
-        if (Input.GetKeyDown(KeyCode.Space))
+            // let player jump
+
+            if (Input.GetKeyDown(KeyCode.Space))
         {
             if (onGround)
             {
@@ -89,7 +93,7 @@ public class PlayerController : MonoBehaviour
 
         // let player jump higher
 
-        if (Input.GetKey(KeyCode.Space))
+        /*if (Input.GetKey(KeyCode.Space))
         {
 
             if (jumpTimeCounter > 0)
@@ -108,7 +112,7 @@ public class PlayerController : MonoBehaviour
         if (onGround)
         {
             jumpTimeCounter = jumpTime;
-        }
+        } */
     }
 
 
