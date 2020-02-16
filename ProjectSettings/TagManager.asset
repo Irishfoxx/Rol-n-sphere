@@ -6,6 +6,7 @@ TagManager:
   tags:
   - killbox
   - reward
+  - Obstacle
   layers:
   - Default
   - TransparentFX

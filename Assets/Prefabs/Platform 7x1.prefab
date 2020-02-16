@@ -318,9 +318,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1663563696963815472}
   - component: {fileID: 1663563696754262481}
+  - component: {fileID: 114748316454797390}
+  - component: {fileID: 50911963256495502}
   m_Layer: 8
   m_Name: Platform 7x1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -372,6 +374,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114748316454797390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663563696754262482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e692d222158b4c478961a8357f29921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: -5
+  speedMultiplier: 0
+  speedIncreaseMilestone: 0
+  speedIncreaseMilestoneStore: 0
+  jumpForce: 0
+  jumpTime: 0
+  onGround: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!50 &50911963256495502
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663563696754262482}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1663563697097231527
 GameObject:
   m_ObjectHideFlags: 0

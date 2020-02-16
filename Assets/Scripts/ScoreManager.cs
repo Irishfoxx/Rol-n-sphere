@@ -20,6 +20,13 @@ public class ScoreManager : MonoBehaviour
 
     public bool scoreIncreasing;
 
+    public GameObject player;
+
+    float beginPos;
+    float curPos;
+
+    public int multiplier = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +38,8 @@ public class ScoreManager : MonoBehaviour
         {
             topDistanceCount = PlayerPrefs.GetFloat("TopDistance");
         }
+
+        beginPos = player.transform.position.x;
     }
 
     // Update is called once per frame
@@ -38,8 +47,11 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreIncreasing)
         {
-            scoreCount += pointsPerSecond * Time.deltaTime;
-            distanceCount += pointsPerSecond * Time.deltaTime;
+            //scoreCount += distanceCount * Time.deltaTime;
+            //distanceCount += pointsPerSecond * Time.deltaTime;
+
+            distanceCount = player.transform.position.x - beginPos;
+            //int distanceCount = Mathf.RoundToInt(curPos * multiplier);
         }
 
         
